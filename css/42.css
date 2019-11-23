@@ -1,0 +1,18 @@
+table.atable {
+	border-collapse:collapse;
+	border-spacing:0; 
+	border:1px  solid  #FFFFFF; 
+	text-align: center;
+}
+table.atable th {
+	background:#50aca2;
+	color: #fff;
+	border-bottom-width: 0;  
+	text-align: center; 
+	height: 2.2rem;
+}
+table.atable td {
+	background: #e5efeb; 
+	text-align: center;
+	height: 2.2rem;
+}

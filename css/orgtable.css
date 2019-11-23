@@ -1,0 +1,26 @@
+table.gridtable {
+	font-family: Consolas;
+	font-size:11px;
+	color:#333333;
+	margin-left: 50px;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	height: 1%;
+	width: 500px;
+	text-align: center;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
