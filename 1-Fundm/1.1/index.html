@@ -505,7 +505,59 @@
                 
                   <h1>1.Number</h1>
                 
-                <p><font face="思源黑体 CN">
+                <style type="text/css">
+#basic1
+{ 
+    font-family:Consolas, "思源黑体 CN"; /* 英文字体写在前, 中英文分离 */
+    border-collapse:collapse; /* 是否将表格两边折叠为一条线 */
+    margin-left: 0px;        /* 表格整体与左侧的距离 */
+}
+
+/* tr: 行标签; td: 行中的列标签; th: 行中的标题标签; */
+
+#basic1 td, #basic th /* 公共属性区 */
+{
+    font-size: 16px;
+    border: 2px solid #FFFFFF; /* 边框宽 边框实线 边框颜色 */
+    padding: 8px 12px 8px 12px;  /* 内边距: 上 右 下 左 */
+}
+
+#basic1 td 
+{ 
+
+    background-color: #e5efeb;
+    /* height: 2.4em;  */  /* 表格高度 */
+    /* font-weight: 500; */ /* 字体加粗 */
+}
+
+#basic1 th 
+{
+    text-align: center;
+    font-size: 16px;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#50aca2;
+    color:#ffffff;           /* 字体颜色: 白 */
+}
+
+/* 用于实现颜色交错, <tr class="alt"> */
+#basic1 tr.alt td 
+{
+    /* background-color:#e5efeb; */
+}
+
+#basic1 tr.smallalign td 
+{
+    padding: 8px 29px 8px 29px;
+}
+
+#basic1 td:hover 
+{
+    /* border: 1px solid red; */
+}
+</style>
+
+<p><font face="思源黑体 CN">
 <font face="Consolas"></font></p>
 <h3 id="1-python">1. <font face="Consolas">Python</font> 支持的数值类型</h3>
 <h4 id="1-int">① <font face="Consolas">int</font></h4>
@@ -555,18 +607,18 @@
 
 <h3 id="3">3. 强制转换</h3>
 <p><body>
-    <table border="1" id="dataTable"  style="margin-left:50px; border-collapse:collapse;border-spacing:0; border:1px  solid  #FFFFFF; text-align: center;" >
-        <tr style="background: #e5efeb; text-align: center;height: 2.2rem;">
-            <td style="text-align:center"><font face="Consolas">int(x, base)</font></td>
-            <td style="text-align:center">转换为整型</td>
+    <table id="basic1">
+        <tr>
+            <td><font face="Consolas">int(x, base)</font></td>
+            <td>转换为整型</td>
         </tr>
-        <tr style="background: #e5efeb; text-align: center;height: 2.2rem;">
-            <td style="text-align:center"><font face="Consolas">long(x, base)</font></td>
+        <tr>
+            <td><font face="Consolas">long(x, base)</font></td>
             <td style="text-align:center">转换为长整型</td>
         </tr>
-        <tr style="background: #e5efeb; text-align: center;height: 2.2rem;">
-            <td style="text-align:center"><font face="Consolas">float(x)</font></td>
-            <td style="text-align:center">转换为浮点</td>
+        <tr>
+            <td><font face="Consolas">float(x)</font></td>
+            <td>转换为浮点</td>
         </tr>
 </table>
 </body></p>
