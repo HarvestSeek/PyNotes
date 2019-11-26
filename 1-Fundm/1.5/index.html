@@ -42,7 +42,7 @@
 
     
       
-        <title>3.List and Tuple - Learning Notes of Python</title>
+        <title>5.Set - Learning Notes of Python</title>
       
     
     
@@ -146,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                3.List and Tuple
+                5.Set
               
             </span>
           
@@ -282,66 +282,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        3.List and Tuple
-      </label>
-    
-    <a href="./" title="3.List and Tuple" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../1.3/" title="3.List and Tuple" class="md-nav__link">
       3.List and Tuple
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" title="1. 初始化与访问" class="md-nav__link">
-    1. 初始化与访问
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-listtuple" title="2. List/Tuple 函数" class="md-nav__link">
-    2. List/Tuple 函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-list" title="3. List 方法" class="md-nav__link">
-    3. List 方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-list" title="4. List 操作符" class="md-nav__link">
-    4. List 操作符
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -361,11 +306,59 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1.5/" title="5.Set" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        5.Set
+      </label>
+    
+    <a href="./" title="5.Set" class="md-nav__link md-nav__link--active">
       5.Set
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 初始化" class="md-nav__link">
+    1. 初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-set" title="2. Set 运算符" class="md-nav__link">
+    2. Set 运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set" title="3. Set 方法" class="md-nav__link">
+    3. Set 方法
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -405,29 +398,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 初始化与访问" class="md-nav__link">
-    1. 初始化与访问
+  <a href="#1" title="1. 初始化" class="md-nav__link">
+    1. 初始化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-listtuple" title="2. List/Tuple 函数" class="md-nav__link">
-    2. List/Tuple 函数
+  <a href="#2-set" title="2. Set 运算符" class="md-nav__link">
+    2. Set 运算符
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-list" title="3. List 方法" class="md-nav__link">
-    3. List 方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-list" title="4. List 操作符" class="md-nav__link">
-    4. List 操作符
+  <a href="#3-set" title="3. Set 方法" class="md-nav__link">
+    3. Set 方法
   </a>
   
 </li>
@@ -449,129 +435,118 @@
               
                 
                 
-                  <h1>3.List and Tuple</h1>
+                  <h1>5.Set</h1>
                 
                 <p><font face="思源黑体 CN">
 <font face="Consolas"></font></p>
-<h3 id="1">1. 初始化与访问</h3>
-<p>&emsp;<font face="Consolas">List</font> 是 <font face="Consolas">Python</font> 中最基本的容器。类似于一些其他语言，它可以动态边长，其中可以存储各种对象。</br></p>
-<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;beginner&#39;</span><span class="p">]</span>
-</pre></div>
-</td></tr></table>
-&emsp;其索引从 <font face="Consolas">0</font> 开始，可以通过下标直接访问，类似于字符串，也可以通过 <font face="Consolas">:</font> 截取、通过负的索引从后向前访问。</p>
-<p>&emsp;<font face="Consolas">Tuple</font> 是不可变的 <font face="Consolas">List</font>：一旦创建，其存储的每个元素的值不可改变。
+<h3 id="1">1. 初始化</h3>
+<p>&emsp;可以通过 <font face="Consolas">{&lt;elements&gt;}</font> 或 <font face="Consolas">set()</font> 创建一个集合。如果要创建一个空集，则必须用 <font face="Consolas">set()</font>，<font face="Consolas">{}</font> 代表创建一个空字典。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dayup&#39;</span><span class="p">)</span>
-<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,)</span>
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span> <span class="s1">&#39;cd&#39;</span><span class="p">}</span>
+<span class="n">set2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">)</span>
+<span class="n">set3</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">set2</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
-&emsp;当元组中只有一个数字的时候，为避免歧义，应该在第一个元素后加逗号。</p>
-<h3 id="2-listtuple">2. <font face="Consolas">List/Tuple</font> 函数</h3>
+</td></tr></table></p>
+<p><font face="Consolas">set</font> 的构造函数：
+<html> 
+<body>
+<ul style="margin-top:-18px;margin-bottom:10px">
+<li style="margin:1px 26px;"><font face="Consolas">set()</font></li>
+<li style="margin:1px 26px;"><font face="Consolas">set(<em>iterable</em>)</font></li>
+</ul>
+</body>
+</html></p>
+<h3 id="2-set">2. <font face="Consolas">Set</font> 运算符</h3>
 <p><body>
 <table id="basic">
-<tr> <th>函数名</th> <th>作用</th> </tr>
-<tr>
-    <td>len(<em>seq</em>)</td>
-    <td>返回元素个数</td>
+<tr> <th>运算</th> <th>作用</th> </tr>
+<tr class="smallalign">
+    <td>a | b</td>
+    <td>$A\cup B$</td>
 </tr>
-<tr class="alt">
-    <td>max(<em>seq</em>)</td>
-    <td>返回元素最大值 (元素类型相同)</td>
+<tr class="smallalign">
+    <td>a &amp; b</td>
+    <td>$A\cap B$</td>
 </tr>
-<tr>
-    <td>min(<em>seq</em>)</td>
-    <td>返回元素最小值 (元素类型相同)</td>
+<tr class="smallalign">
+    <td>a - b</td>
+    <td>$A\setminus B$</td>
 </tr>
-<tr class="alt">
-    <td>list(<em>seq</em>)</td>
-    <td>转换为<font face="思源黑体 CN"> </font>list</td>
-</tr>
-<tr class="alt">
-    <td>tuple(<em>seq</em>)</td>
-    <td>转换为<font face="思源黑体 CN"> </font>tuple</td>
-</tr>
-<tr class="alt">
-    <td>type(<em>var</em>)</td>
-    <td>返回输入的变量所属的类型</td>
-</tr>
-<tr class="alt">
-    <td>sorted(<em>iter_obj</em>, <em>cmp</em>=None, <em>key</em>=None, <em>reverse</em>=false)</td>
-    <td>返回一个排序的可迭代对象</td>
+<tr class="smallalign">
+    <td>a ^ b</td>
+    <td>$A\bigtriangleup B$</td>
 </tr>
 </table>
 </body></p>
-<h3 id="3-list">3. <font face="Consolas">List</font> 方法</h3>
+<h3 id="3-set">3. <font face="Consolas">Set</font> 方法</h3>
 <p><body>
 <table id="basic">
 <tr> <th>方法名</th> <th>作用</th> </tr>
 <tr>
-    <td>append(<em>obj</em>)</td>
-    <td>在列表末尾添加对象</td>
-</tr>
-<tr class="alt">
-    <td>insert(<em>index</em>, <em>obj</em>)</td>
-    <td>将对象插入到指定位置</td>
+    <td>add(<em>e</em>)</td>
+    <td>添加一个元素</td>
 </tr>
 <tr>
-    <td>pop([<em>index</em> = -1])</td>
-    <td>删除列表中元素。当不指明索引时默认为-1</td>
+    <td>update(<em>S</em>)</td>
+    <td>添加新的元素或集合到此集合中</td>
 </tr>
 <tr class="alt">
-    <td>remove(<em>obj</em>)</td>
-    <td>移除第一个<font face="思源黑体 CN"> </font>obj<font face="思源黑体 CN"> </font>的匹配项</td>
+    <td>discard(<em>e</em>)</td>
+    <td>删除一个元素</td>
 </tr>
-</tr>
-<tr class="alt">
-    <td>index(<em>obj</em>, [<em>start</em>, [<em>end</em>]])</td>
-    <td>返回某个元素在列表中第一次出现的索引，也可以指明查找的范围</td>
-</tr>
-<tr class="alt">
-    <td>count(<em>obj</em>)</td>
-    <td>返回某个元素在列表中出现的次数</td>
-</tr>
+<tr>
+    <td>remove(<em>e</em>)</td>
+    <td>删除一个元素。若<font face="思源黑体 CN"> </font><em>e</em><font face="思源黑体 CN"> </font>不存在会报错。</td>
 </tr>
 <tr class="alt">
-    <td>reverse()</td>
-    <td>反转列表</td>
+    <td>pop()</td>
+    <td>随机移除一个元素</td>
 </tr>
 </tr>
 <tr class="alt">
-    <td>extend(<em>seq</em>)</td>
-    <td>在列表末尾追加另一个序列</td>
+    <td>issubset(<em>S</em>),issuperset(<em>S</em>)</td>
+    <td>是否为指定集合的子/超集</td>
 </tr>
 <tr class="alt">
-    <td>sort(<em>cmp</em>=None, <em>key</em>=None, <em>reverse</em>=false)</td>
-    <td>把列表排序</td>
+    <td>isdisjoint(<em>S</em>)</td>
+    <td>判断两个集合是否不相交</td>
+</tr>
+</tr>
+<tr class="alt">
+    <td>union(<em>set1</em>, ...)</td>
+    <td>合并两个或多个集合</td>
+</tr>
+</tr>
+<tr class="alt">
+    <td>intersection(<em>set1</em>, ...)</td>
+    <td>返回两个或多个集合的交(新集合)</td>
+</tr>
+<tr class="alt">
+    <td>intersection_update(<em>set1</em>, ...)</td>
+    <td>返回两个或多个集合的交(在原集合上删除非公共元素)</td>
+</tr>
+<tr class="alt">
+    <td>difference(<em>S</em>)</td>
+    <td>返回集合与<font face="思源黑体 CN"> </font><em>S</em><font face="思源黑体 CN"> </font>的差集</td>
+</tr>
+<tr class="alt">
+    <td>difference_update(<em>S</em>)</td>
+    <td>在原集合上移除</td>
+</tr>
+<tr class="alt">
+    <td>symmetric_difference(<em>S</em>)</td>
+    <td>返回集合与<font face="思源黑体 CN"> </font><em>S</em><font face="思源黑体 CN"> </font>的对称差集</td>
+</tr>
+<tr class="alt">
+    <td>symmetric_difference_update(<em>S</em>)</td>
+    <td>返回集合与<font face="思源黑体 CN"> </font><em>S</em><font face="思源黑体 CN"> </font>的对称差集，在原集合上操作</td>
 </tr>
 </table>
-</body>
-<font face="Consolas">Tuple</font> 则只支持其中的两个 <font face="Consolas">Observer</font>: <font face="Consolas">index()</font>、<font face="Consolas">count()</font>。</p>
-<h3 id="4-list">4. <font face="Consolas">List</font> 操作符</h3>
-<p><body>
-<table id="basic">
-<tr> <th>操作符</th> <th>作用</th> </tr>
-<tr class="smallalign">
-    <td>[1, 2] + [3, 4]</td>
-    <td>拼接</td>
-</tr>
-<tr class="smallalign">
-    <td>['hello'] * 6</td>
-    <td>重复拼接</td>
-</tr>
-<tr class="smallalign">
-    <td>1 in [1, 2, 3]</td>
-    <td>存在于</td>
-</tr>
-<tr class="smallalign">
-    <td>for x in [1, 2]</td>
-    <td>迭代</td>
-</tr></p>
-<p></table>
-</body>
-以上所有运算符也适用于 <font face="Consolas">Tuple</font>。
-</font></p>
+</body></p>
+<p></font></p>
                 
                   
                 
@@ -592,7 +567,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1.2/" title="2.String" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1.4/" title="4.Dict" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -601,19 +576,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2.String
+                4.Dict
               </span>
             </div>
           </a>
         
         
-          <a href="../1.4/" title="4.Dict" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1.6/" title="6.Basic Structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                4.Dict
+                6.Basic Structure
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -42,7 +42,7 @@
 
     
       
-        <title>3.List and Tuple - Learning Notes of Python</title>
+        <title>4.Dict - Learning Notes of Python</title>
       
     
     
@@ -146,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                3.List and Tuple
+                4.Dict
               
             </span>
           
@@ -282,6 +282,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../1.3/" title="3.List and Tuple" class="md-nav__link">
+      3.List and Tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -291,11 +303,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        3.List and Tuple
+        4.Dict
       </label>
     
-    <a href="./" title="3.List and Tuple" class="md-nav__link md-nav__link--active">
-      3.List and Tuple
+    <a href="./" title="4.Dict" class="md-nav__link md-nav__link--active">
+      4.Dict
     </a>
     
       
@@ -314,22 +326,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-listtuple" title="2. List/Tuple 函数" class="md-nav__link">
-    2. List/Tuple 函数
+  <a href="#2-dict" title="2. Dict 函数" class="md-nav__link">
+    2. Dict 函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-list" title="3. List 方法" class="md-nav__link">
-    3. List 方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-list" title="4. List 操作符" class="md-nav__link">
-    4. List 操作符
+  <a href="#3-dict" title="3. Dict 方法" class="md-nav__link">
+    3. Dict 方法
   </a>
   
 </li>
@@ -342,18 +347,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1.4/" title="4.Dict" class="md-nav__link">
-      4.Dict
-    </a>
   </li>
 
         
@@ -412,22 +405,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-listtuple" title="2. List/Tuple 函数" class="md-nav__link">
-    2. List/Tuple 函数
+  <a href="#2-dict" title="2. Dict 函数" class="md-nav__link">
+    2. Dict 函数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-list" title="3. List 方法" class="md-nav__link">
-    3. List 方法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-list" title="4. List 操作符" class="md-nav__link">
-    4. List 操作符
+  <a href="#3-dict" title="3. Dict 方法" class="md-nav__link">
+    3. Dict 方法
   </a>
   
 </li>
@@ -449,129 +435,126 @@
               
                 
                 
-                  <h1>3.List and Tuple</h1>
+                  <h1>4.Dict</h1>
                 
                 <p><font face="思源黑体 CN">
-<font face="Consolas"></font></p>
+<font face="Consolas"></font>
+<font face="思源黑体 CN"> </font></p>
 <h3 id="1">1. 初始化与访问</h3>
-<p>&emsp;<font face="Consolas">List</font> 是 <font face="Consolas">Python</font> 中最基本的容器。类似于一些其他语言，它可以动态边长，其中可以存储各种对象。</br></p>
+<p>&emsp;字典也是一种可变容器，等同于其他语言中的 <font face="Consolas">map</font>。<font face="Consolas">key</font> 与 <font face="Consolas">key</font> 以及 <font face="Consolas">value</font> 与 <font face="Consolas">value</font> 之间的类型可以不同。</p>
 <p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;beginner&#39;</span><span class="p">]</span>
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;b&#39;</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dict1</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </td></tr></table>
-&emsp;其索引从 <font face="Consolas">0</font> 开始，可以通过下标直接访问，类似于字符串，也可以通过 <font face="Consolas">:</font> 截取、通过负的索引从后向前访问。</p>
-<p>&emsp;<font face="Consolas">Tuple</font> 是不可变的 <font face="Consolas">List</font>：一旦创建，其存储的每个元素的值不可改变。
+&emsp;可以通过访问直接修改 <font face="Consolas">value</font> 或添加 <font face="Consolas">key-value</font>。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dayup&#39;</span><span class="p">)</span>
-<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,)</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dict1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">dict1</span><span class="p">[</span><span class="s1">&#39;ff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;surr&#39;</span>
 </pre></div>
 </td></tr></table>
-&emsp;当元组中只有一个数字的时候，为避免歧义，应该在第一个元素后加逗号。</p>
-<h3 id="2-listtuple">2. <font face="Consolas">List/Tuple</font> 函数</h3>
+&emsp;如果访问的 <font face="Consolas">key</font> 不存在，会抛出一个 <font face="Consolas">KeyError</font>。因此访问前，可以通过操作符 <font face="Consolas">in</font> 或 <font face="Consolas">get()</font> 方法事先判断。</br>
+&emsp;在 <font face="Consolas">Python</font> 中，<font face="Consolas">dict</font> 的 <font face="Consolas">key</font> 必须是不可变对象，因此可以是数、字符串、元组，而不能是列表。</p>
+<p><font face="Consolas">dict</font> 的构造函数：
+<html> 
+<body>
+<ul style="margin-top:-18px;margin-bottom:10px">
+<li style="margin:1px 26px;"><font face="Consolas">dict()</font></li>
+<li style="margin:1px 26px;"><font face="Consolas">dict(**<em>kwargs</em>)</font></li>
+<li style="margin:1px 26px;"><font face="Consolas">dict(<em>mapping</em>)</font></li>
+<li style="margin:1px 26px;"><font face="Consolas">dict(<em>iterable</em>)</font></li>
+</ul>
+</body>
+</html>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># empty dict</span>
+<span class="n">dict1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># init by assignment expression</span>
+<span class="n">dict2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1"># eq: {&#39;a&#39;: &#39;a&#39;, &#39;b&#39;: 1}</span>
+
+<span class="c1"># init by mapping</span>
+<span class="n">dict3</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]))</span>
+
+<span class="c1"># init by iterable object</span>
+<span class="n">dict4</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]])</span>
+</pre></div>
+</td></tr></table></p>
+<h3 id="2-dict">2. <font face="Consolas">Dict</font> 函数</h3>
 <p><body>
 <table id="basic">
 <tr> <th>函数名</th> <th>作用</th> </tr>
 <tr>
     <td>len(<em>seq</em>)</td>
-    <td>返回元素个数</td>
+    <td>返回键值个数</td>
 </tr>
 <tr class="alt">
-    <td>max(<em>seq</em>)</td>
-    <td>返回元素最大值 (元素类型相同)</td>
-</tr>
-<tr>
-    <td>min(<em>seq</em>)</td>
-    <td>返回元素最小值 (元素类型相同)</td>
-</tr>
-<tr class="alt">
-    <td>list(<em>seq</em>)</td>
-    <td>转换为<font face="思源黑体 CN"> </font>list</td>
-</tr>
-<tr class="alt">
-    <td>tuple(<em>seq</em>)</td>
-    <td>转换为<font face="思源黑体 CN"> </font>tuple</td>
+    <td>list(<em>seq</em>)、tuple(<em>seq</em>)</td>
+    <td>把键的序列转换为列表或元组</td>
 </tr>
 <tr class="alt">
     <td>type(<em>var</em>)</td>
     <td>返回输入的变量所属的类型</td>
 </tr>
-<tr class="alt">
-    <td>sorted(<em>iter_obj</em>, <em>cmp</em>=None, <em>key</em>=None, <em>reverse</em>=false)</td>
-    <td>返回一个排序的可迭代对象</td>
-</tr>
 </table>
 </body></p>
-<h3 id="3-list">3. <font face="Consolas">List</font> 方法</h3>
+<h3 id="3-dict">3. <font face="Consolas">Dict</font> 方法</h3>
 <p><body>
 <table id="basic">
 <tr> <th>方法名</th> <th>作用</th> </tr>
 <tr>
-    <td>append(<em>obj</em>)</td>
-    <td>在列表末尾添加对象</td>
+    <td>get(<em>key</em>, <em>default</em>=None)</td>
+    <td>返回对应<font face="思源黑体 CN"> </font><em>key</em><font face="思源黑体 CN"> </font>对应的<font face="思源黑体 CN"> </font>value，如果不存在返回<font face="思源黑体 CN"> </font>default</td>
 </tr>
 <tr class="alt">
-    <td>insert(<em>index</em>, <em>obj</em>)</td>
-    <td>将对象插入到指定位置</td>
+    <td>has_key(<em>key</em>)</td>
+    <td>判断是否有<font face="思源黑体 CN"> </font>key</td>
 </tr>
 <tr>
-    <td>pop([<em>index</em> = -1])</td>
-    <td>删除列表中元素。当不指明索引时默认为-1</td>
+    <td>setdefault(<em>key</em>, <em>default</em>=None)</td>
+    <td>类似于<font face="思源黑体 CN"> </font>get()，额外地，如果<font face="思源黑体 CN"> </font>key<font face="思源黑体 CN"> </font>不存在于字典中，向字典中添加<font face="思源黑体 CN"> </font>(key-&gt;default)</td>
 </tr>
 <tr class="alt">
-    <td>remove(<em>obj</em>)</td>
-    <td>移除第一个<font face="思源黑体 CN"> </font>obj<font face="思源黑体 CN"> </font>的匹配项</td>
-</tr>
-</tr>
-<tr class="alt">
-    <td>index(<em>obj</em>, [<em>start</em>, [<em>end</em>]])</td>
-    <td>返回某个元素在列表中第一次出现的索引，也可以指明查找的范围</td>
-</tr>
-<tr class="alt">
-    <td>count(<em>obj</em>)</td>
-    <td>返回某个元素在列表中出现的次数</td>
+    <td>pop(<em>key</em>[, <em>default</em>])</td>
+    <td>删除字典中<font face="思源黑体 CN"> </font><em>key</em><font face="思源黑体 CN"> </font>对应的<font face="思源黑体 CN"> </font>value<font face="思源黑体 CN"> </font>并返回被删掉的值。如果<font face="思源黑体 CN"> </font><em>key</em><font face="思源黑体 CN"> </font>不存在且设置了<font face="思源黑体 CN"> </font><em>default</em>，返回<font face="思源黑体 CN"> </font><em>default</em>；否则抛出<font face="思源黑体 CN"> </font>KeyError</td>
 </tr>
 </tr>
 <tr class="alt">
-    <td>reverse()</td>
-    <td>反转列表</td>
+    <td>keys(),values(),items()</td>
+    <td>返回可遍历的键、值、键值的列表</td>
+</tr>
+<tr class="alt">
+    <td>fromkeys(<em>seq</em>[, <em>val</em>])</td>
+    <td><font face="思源黑体 CN">创建一个新字典，以 </font><em>seq</em><font face="思源黑体 CN"> 为键值序列，</font><em>val</em><font face="思源黑体 CN"> </font>为该字典所有值的初始值</td>
 </tr>
 </tr>
 <tr class="alt">
-    <td>extend(<em>seq</em>)</td>
-    <td>在列表末尾追加另一个序列</td>
+    <td>update(<em>dict</em>)</td>
+    <td>把<font face="思源黑体 CN"> </font><em>dict</em><font face="思源黑体 CN"> </font>中的键值对都更新到字典里</td>
+</tr>
 </tr>
 <tr class="alt">
-    <td>sort(<em>cmp</em>=None, <em>key</em>=None, <em>reverse</em>=false)</td>
-    <td>把列表排序</td>
+    <td>clear()</td>
+    <td>清空所有元素</td>
+</tr>
+<tr class="alt">
+    <td>copy()</td>
+    <td>Shallow Copy</td>
 </tr>
 </table>
-</body>
-<font face="Consolas">Tuple</font> 则只支持其中的两个 <font face="Consolas">Observer</font>: <font face="Consolas">index()</font>、<font face="Consolas">count()</font>。</p>
-<h3 id="4-list">4. <font face="Consolas">List</font> 操作符</h3>
-<p><body>
-<table id="basic">
-<tr> <th>操作符</th> <th>作用</th> </tr>
-<tr class="smallalign">
-    <td>[1, 2] + [3, 4]</td>
-    <td>拼接</td>
-</tr>
-<tr class="smallalign">
-    <td>['hello'] * 6</td>
-    <td>重复拼接</td>
-</tr>
-<tr class="smallalign">
-    <td>1 in [1, 2, 3]</td>
-    <td>存在于</td>
-</tr>
-<tr class="smallalign">
-    <td>for x in [1, 2]</td>
-    <td>迭代</td>
-</tr></p>
-<p></table>
-</body>
-以上所有运算符也适用于 <font face="Consolas">Tuple</font>。
-</font></p>
+</body></p>
+<p></font></p>
                 
                   
                 
@@ -592,7 +575,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1.2/" title="2.String" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1.3/" title="3.List and Tuple" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -601,19 +584,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                2.String
+                3.List and Tuple
               </span>
             </div>
           </a>
         
         
-          <a href="../1.4/" title="4.Dict" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1.5/" title="5.Set" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                4.Dict
+                5.Set
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
