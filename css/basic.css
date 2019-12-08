@@ -9,7 +9,7 @@
 
 #basic td, #basic th /* 公共属性区 */
 {
-	font-size: 14px;
+	font-size: 14px; /* local 16px; remote: 14px */
 	border: 2px solid #FFFFFF; /* 边框宽 边框实线 边框颜色 */
 	padding: 8px 12px 8px 12px;  /* 内边距: 上 右 下 左 */
 }
@@ -25,7 +25,7 @@
 #basic th 
 {
 	text-align: center;
-	font-size: 16px;
+	/*font-size: 16px;*/
 	padding-top:5px;
 	padding-bottom:4px;
 	background-color:#50aca2;
