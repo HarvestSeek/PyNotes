@@ -471,6 +471,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-package" title="4. Package" class="md-nav__link">
+    4. Package
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="(1). 导入方法" class="md-nav__link">
+    (1). 导入方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-from-package_name-import" title="(2). from &lt;package_name&gt; import *" class="md-nav__link">
+    (2). from &lt;package_name&gt; import *
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="(3). 同级导入" class="md-nav__link">
+    (3). 同级导入
+  </a>
+  
+</li>
+      
       
       
       
@@ -522,6 +556,40 @@
         <li class="md-nav__item">
   <a href="#3-9595name9595" title="3. __name__ 属性" class="md-nav__link">
     3. __name__ 属性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-package" title="4. Package" class="md-nav__link">
+    4. Package
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="(1). 导入方法" class="md-nav__link">
+    (1). 导入方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-from-package_name-import" title="(2). from &lt;package_name&gt; import *" class="md-nav__link">
+    (2). from &lt;package_name&gt; import *
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="(3). 同级导入" class="md-nav__link">
+    (3). 同级导入
   </a>
   
 </li>
@@ -599,7 +667,88 @@
 </pre></div>
 </td></tr></table>
 
-<p></font></p>
+<h3 id="4-package">4. <font face="Consolas">Package</font></h3>
+<p>&emsp;<font face="Consolas">Python</font> 也通过包管理一个项目不同模块的命名空间。</br>
+&emsp;一个目录只有在包含一个 <font face="Consolas">__init.py__</font> 的时候才会被认为是 <font face="Consolas">Python</font> 的一个 <font face="Consolas">Package</font>。在导入一个包的时候，首先会默认执行 <font face="Consolas">__init.py__</font> 里的代码，因此可以利用 <font face="Consolas">__init.py__</font> 做一些初始化的工作，例如导入一些默认模块。</p>
+<h4 id="1">(1). 导入方法</h4>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">item.subitem.subsubitem</span>
+
+<span class="n">item</span><span class="o">.</span><span class="n">subitem</span><span class="o">.</span><span class="n">subsubitem</span><span class="o">.</span><span class="n">func</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+&emsp;以上面的代码为例，如果是通过 <font face="Consolas">import</font> 导入，前面的每一项必须都是包，而最后一项 (<font face="Consolas">subsubitem</font>) 可以是包名或模块名 (<font face="Consolas">py</font> 文件名)，并且通过这种方式导入的模块中的变量和函数必须通过全名使用。</p>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">package</span> <span class="kn">import</span> <span class="n">item</span>
+</pre></div>
+</td></tr></table>
+&emsp;而如果是通过上面的方式导入，<font face="Consolas">item</font> 可以是子包、模块、函数或变量的名字 (不能包含 <font face="Consolas">"."</font>)。</br>
+&emsp;需要注意的是，以上两种方法如果最终导入的是一个包，只是相当于执行相应包中的 <font face="Consolas">__init.py__</font>，而没有导入相应包中的子模块。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">example:</span>
+<span class="sd">.</span>
+<span class="sd">└── mainpackage</span>
+<span class="sd">    ├── __init__.py</span>
+<span class="sd">    ├── s0.py</span>
+<span class="sd">    ├── subpackage1</span>
+<span class="sd">    |   ├── __init__.py</span>
+<span class="sd">    │   └── s1.py</span>
+<span class="sd">    └── subpackage2</span>
+<span class="sd">        ├── __init__.py</span>
+<span class="sd">        ├── s2.py</span>
+<span class="sd">        └── s3.py</span>
+<span class="sd">└── demo.py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># in demo.py:</span>
+<span class="kn">import</span> <span class="nn">mainpackage.subpackage1</span>
+
+<span class="c1"># invalid:</span>
+<span class="n">mainpackage</span><span class="o">.</span><span class="n">subpackage1</span><span class="o">.</span><span class="n">s1</span><span class="o">.</span><span class="n">func</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+在上面的例子中，只有 <font face="Consolas">subpackage1</font> 的 <font face="Consolas">__init.py__</font> 中导入了 <font face="Consolas">s1</font>，<font face="Consolas">s1</font> 符号表才能成功添加到 <font face="Consolas">demo.py</font> 中，上面的调用语句才能生效。</p>
+<h4 id="2-from-package_name-import">(2). <font face="Consolas">from &lt;package_name&gt; import *</font></h4>
+<p>&emsp;由于 <font face="Consolas">Windows</font> 是一个不区分大小写的系统，因此，在使用 <kbd><font face="Consolas">from &lt;package_name&gt; import *</font></kbd> 时默认不会导入任何子模块，也只是相当于 <font face="Consolas">(1)</font> 中的导入 <font face="Consolas">__init.py__</font> 而已。</br>
+&emsp;实际上，<kbd><font face="Consolas">from &lt;package_name&gt; import 
+*</font></kbd> 会导入 <font face="Consolas">&lt;package_name&gt;</font> 的 <font face="Consolas">__init.py__</font> 中的列表变量 <font face="Consolas">__all__</font> 内的所有名字。</br>
+&emsp;对于 <font face="Consolas">(1)</font> 中的最后一个例子，<font face="Consolas">mainpackage</font> 可以这样设置：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># __init.py__ of mainpackage</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;subpackage1&#39;</span><span class="p">,</span> <span class="s1">&#39;subpackage2&#39;</span><span class="p">,</span> <span class="s1">&#39;s0&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+尽管这种导入方法很方便，但仍然推荐 <kbd><font face="Consolas">from &lt;package_name&gt; import &lt;specific_module&gt;</font></kbd></p>
+<h3 id="3">(3). 同级导入</h3>
+<p>沿用 <font face="Consolas">(1)</font> 中的例子，可以通过以下方式避免使用绝对路径导入：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># file: s2.py</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">s3</span> <span class="c1"># eql: from mainpackage.subpackage2 import s3</span>
+</pre></div>
+</td></tr></table>
+</font></p>
                 
                   
                 
