@@ -386,6 +386,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.8/" title="8.Listcomps and Genexps" class="md-nav__link">
+      8.Listcomps and Genexps
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -520,7 +532,7 @@
 <ul style="margin-top:-10px;margin-bottom:10px;line-height:30px;">
 <li style="margin:1px 26px;">当只有最后一个元素的位置信息，可以直接得到区间内元素数量，如 <font face="Consolas">range(3)</font> 和 <font face="Consolas">my_list[:3]</font>；</li>
 <li style="margin:1px 26px;">当起止信息都可见时，可通过 <font face="Consolas">(stop - start)</font> 得到元素数量；</li>
-<li style="margin:1px 26px;">可以通过任意下标 <font face="Consolas">x</font> 把区间分成不相交的两部分，如 <font face="Consolas">my_list[:x]</font> 和 <font face="Consolas">my_list[x:]</font>。</li>
+<li style="margin:1px 26px;">可以通过一个任意下标 <font face="Consolas">x</font> 把区间分成不相交的两部分，如 <font face="Consolas">my_list[:x]</font> 和 <font face="Consolas">my_list[x:]</font>。</li>
 </ul>
 </body>
 </html></p>
@@ -529,7 +541,7 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">:</span><span class="n">c</span><span class="p">]</span>
 </pre></div>
 </td></tr></table>
-表示在 <font face="Consolas">[a, b)</font> 之间以 <font face="Consolas">c</font> 为间隔 (下标的值) 取值。
+表示在 <font face="Consolas">[a, b)</font> 之间以 <font face="Consolas">c</font> 为间隔 (下标的值) 取值。<font face="Consolas">c</font> 的值小于 <font face="Consolas">0</font> 代表从反方向截取。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -540,6 +552,7 @@
 </pre></div>
 </td></tr></table></p>
 <h3 id="3">3. 切片赋值</h3>
+<p>把切片指定的范围用一个新对象赋值。
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -554,8 +567,7 @@
 <span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># [0, 10, 2, 30, 4, 50, 6, 70, 8, 90, 10]</span>
 </pre></div>
-</td></tr></table>
-
+</td></tr></table></p>
 <p></font></p>
                 
                   
@@ -592,13 +604,13 @@
           </a>
         
         
-          <a href="../../2-Func/2.1/" title="1.basic characteristics" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1.8/" title="8.Listcomps and Genexps" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1.basic characteristics
+                8.Listcomps and Genexps
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
