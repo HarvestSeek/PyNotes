@@ -493,15 +493,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#3" title="(3). 同级导入" class="md-nav__link">
     (3). 同级导入
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -513,6 +513,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.2/" title="2.Class and Instance" class="md-nav__link">
+      2.Class and Instance
+    </a>
   </li>
 
         
@@ -582,15 +594,15 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#3" title="(3). 同级导入" class="md-nav__link">
     (3). 同级导入
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -624,7 +636,7 @@
 <span class="k">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
-其格式为 <font face="Consolas">import &lt;module_name&gt;</font> 或 <font face="Consolas">import &lt;module_name&gt; as &lt;bias&gt;</font>。
+其格式为 <kbd><font face="Consolas">import &lt;module_name&gt;</font></kbd> 或 <kbd><font face="Consolas">import &lt;module_name&gt; as &lt;bias&gt;</font></kbd>。
 <html> 
 <body>
 <ul style="margin-top:0px;margin-bottom:10px;line-height:30px;">
@@ -657,8 +669,7 @@
 </td></tr></table>
 这种方法并不建议频繁使用，因为它存在覆盖已有定义的风险。</p>
 <h3 id="3-9595name9595">3. <font face="Consolas">__name__</font> 属性</h3>
-<p>&emsp;<font face="Consolas">Python</font> 中每个模块都有一个 <font face="Consolas">__name__</font> 属性。只有当 <font face="Consolas">py</font> 文件被当作脚本执行而不是被当作模块引入的时候，<font face="Consolas">__name__</font> 的值才等于 <font face="Consolas">'__main__'</font>。</br>
-&emsp;可以利用这个特性运行测试。</p>
+<p>&emsp;<font face="Consolas">Python</font> 中每个模块都有一个 <font face="Consolas">__name__</font> 属性。只有当 <font face="Consolas">py</font> 文件被当作脚本执行而不是被当作模块引入的时候，<font face="Consolas">__name__</font> 的值才等于 <font face="Consolas">'__main__'</font>。可以利用这个特性测试模块。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">...</span>
@@ -741,7 +752,7 @@
 </pre></div>
 </td></tr></table>
 尽管这种导入方法很方便，但仍然推荐 <kbd><font face="Consolas">from &lt;package_name&gt; import &lt;specific_module&gt;</font></kbd></p>
-<h3 id="3">(3). 同级导入</h3>
+<h4 id="3">(3). 同级导入</h4>
 <p>沿用 <font face="Consolas">(1)</font> 中的例子，可以通过以下方式避免使用绝对路径导入：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># file: s2.py</span>
@@ -783,6 +794,20 @@
             </div>
           </a>
         
+        
+          <a href="../3.2/" title="2.Class and Instance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2.Class and Instance
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
