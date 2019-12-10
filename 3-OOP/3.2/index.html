@@ -490,6 +490,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5" title="5. 函数重载" class="md-nav__link">
+    5. 函数重载
+  </a>
+  
+</li>
+      
       
       
       
@@ -498,6 +505,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.3/" title="3.Inheritance and Polymorphism" class="md-nav__link">
+      3.Inheritance and Polymorphism
+    </a>
   </li>
 
         
@@ -552,6 +571,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5" title="5. 函数重载" class="md-nav__link">
+    5. 函数重载
+  </a>
+  
+</li>
+      
       
       
       
@@ -585,7 +611,8 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Teemo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Teemo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="n">weapon</span> <span class="o">=</span> <span class="s1">&#39;arrow&#39;</span>
 
@@ -593,9 +620,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Teemo&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mushrooms</span> <span class="o">=</span> <span class="n">mushrooms</span>
 
-    <span class="k">def</span> <span class="nf">skill_r</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">put_mushrooms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mushrooms</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">mushrooms</span> <span class="o">-=</span> <span class="n">n</span>
+            <span class="k">return</span> <span class="bp">True</span>
 </pre></div>
 </td></tr></table>
 在 <font face="Consolas">Python3</font> 中，<kbd><font face="Consolas">class Name(<em>object</em>):</font></kbd> 与 <kbd><font face="Consolas">class Name():</font></kbd> 和 <kbd><font face="Consolas">class Name:</font></kbd> 等价，都代表继承默认的基类 <font face="Consolas">object</font>。</p>
@@ -691,7 +719,18 @@
 <span class="n">Teemo</span><span class="o">.</span><span class="n">tp</span> <span class="o">=</span> <span class="n">tp</span>
 <span class="n">hero</span><span class="o">.</span><span class="n">tp</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></p>
+</td></tr></table>
+此外，还需要注意：
+<html> 
+<body>
+<ul style="margin-top:0px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">动态添加属性 <kbd><font face="Consolas">__&lt;<em>attribute</em>&gt;</font></kbd> 是无法作为原类的私有变量；</li>
+<li style="margin:1px 26px;">当类属性和实例属性同名，访问时类属性会覆盖实例属性。</li>
+</ul>
+</body>
+</html></p>
+<h3 id="5">5. 函数重载</h3>
+<p>&emsp;函数的重载是为了摆脱静态语言对于参数的限制的一种办法 (如 <font face="Consolas">Java</font>)。<font face="Consolas">Python</font> 作为一门动态类型语言，函数的参数没有类型限制且带有默认参数等功能，因而不需要函数的重载。</p>
 <p></font></p>
                 
                   
@@ -727,6 +766,20 @@
             </div>
           </a>
         
+        
+          <a href="../3.3/" title="3.Inheritance and Polymorphism" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                3.Inheritance and Polymorphism
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
