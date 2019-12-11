@@ -42,7 +42,7 @@
 
     
       
-        <title>2.3 - Learning Notes of Python</title>
+        <title>3.High-order Function - Learning Notes of Python</title>
       
     
     
@@ -120,6 +120,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -142,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                2.3
+                3.High-order Function
               
             </span>
           
@@ -353,10 +357,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       II Function
@@ -386,9 +392,89 @@
 
 
   <li class="md-nav__item">
-    <a href="../2.2." title="2.Parameter Characteristics" class="md-nav__link">
+    <a href="../2.2/" title="2.Parameter Characteristics" class="md-nav__link">
       2.Parameter Characteristics
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3.High-order Function
+      </label>
+    
+    <a href="./" title="3.High-order Function" class="md-nav__link md-nav__link--active">
+      3.High-order Function
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 函数即对象" class="md-nav__link">
+    1. 函数即对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mapfunc-42iterables-map-object" title="(1). map(func, *iterables) -&gt; map object" class="md-nav__link">
+    (1). map(func, *iterables) -&gt; map object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reducefunc-sequence-value" title="(2). reduce(func, sequence[..]) -&gt; value" class="md-nav__link">
+    (2). reduce(func, sequence[..]) -&gt; value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-filterfunc-iterables-filter-object" title="(3). filter(func, iterables) -&gt; filter object" class="md-nav__link">
+    (3). filter(func, iterables) -&gt; filter object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sorted" title="(4). sorted()" class="md-nav__link">
+    (4). sorted()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -464,15 +550,152 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 函数即对象" class="md-nav__link">
+    1. 函数即对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mapfunc-42iterables-map-object" title="(1). map(func, *iterables) -&gt; map object" class="md-nav__link">
+    (1). map(func, *iterables) -&gt; map object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-reducefunc-sequence-value" title="(2). reduce(func, sequence[..]) -&gt; value" class="md-nav__link">
+    (2). reduce(func, sequence[..]) -&gt; value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-filterfunc-iterables-filter-object" title="(3). filter(func, iterables) -&gt; filter object" class="md-nav__link">
+    (3). filter(func, iterables) -&gt; filter object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sorted" title="(4). sorted()" class="md-nav__link">
+    (4). sorted()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>2.3</h1>
+                  <h1>3.High-order Function</h1>
                 
-                
+                <p><font face="思源黑体 CN">
+<font face="Consolas"></font></p>
+<h3 id="1">1. 函数即对象</h3>
+<p>在 <font face="Consolas">Python</font> 中，函数是一等对象，即：
+<html> 
+<body>
+<ul style="margin-top:-16px;margin-bottom:10px;line-height:30px;">
+<li style="margin:1px 26px;">在运行时创建；</li>
+<li style="margin:1px 26px;">能赋值给变量或数据结构中的元素；</li>
+<li style="margin:1px 26px;">能作为参数传递给函数；</li>
+<li style="margin:1px 26px;">能作为函数的返回结果。</li>
+</ul>
+</body>
+</html>
+接收函数为参数，或者把函数作为返回值的函数是高阶函数。<font face="Consolas">Python</font> 内置了 <font face="Consolas">map/reduce</font>、<font face="Consolas">filter</font>、<font face="Consolas">sorted</font> 等高阶函数。在 <font face="Consolas">Python3</font> 中，由于引入了列表生成式和生成器表达式，<font face="Consolas">map</font> 和 <font face="Consolas">filter</font> 可以被很好地替代。</p>
+<h4 id="1-mapfunc-42iterables-map-object">(1). <font face="Consolas">map(<em>func</em>, *<em>iterables</em>) -&gt; map object</font></h4>
+<p><font face="Consolas">map</font> 把传入的函数作用于可迭代对象的每个元素，并返回一个 <font face="Consolas">iterator</font>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+
+<span class="n">res</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+</td></tr></table>
+由于 <font face="Consolas">iterator</font> 是一个惰性序列，还需要 <font face="Consolas">list()</font> 把每个元素都计算出来。</p>
+<h4 id="2-reducefunc-sequence-value">(2). <font face="Consolas">reduce(<em>func</em>, <em>sequence</em>[..]) -&gt; value</font></h4>
+<p><font face="Consolas"><em>func</em></font> 必须接收两个参数，其效果相当于：</br>
+&emsp;&emsp;&emsp;<font face="Consolas">reduce(<em>f</em>, [x1, x2, x3, x4]) = <em>f</em>(<em>f</em>(<em>f</em>(x1, x2), x3), x4)</font>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">y</span>
+
+
+<span class="n">res</span> <span class="o">=</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</td></tr></table></p>
+<h4 id="3-filterfunc-iterables-filter-object">(3). <font face="Consolas">filter(<em>func</em>, <em>iterables</em>) -&gt; filter object</font></h4>
+<p>和 <font face="Consolas">map</font> 类似，接收函数和序列作为参数，并返回一个 <font face="Consolas">iterator</font>。不同的是，<font face="Consolas">filter</font> 根据函数返回值是 <font face="Consolas">True/False</font> 判断保留还是丢弃该元素。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">not_empty</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">not_empty</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]))</span>
+<span class="c1"># res = [&#39;A&#39;, &#39;D&#39;]</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="4-sorted">(4). <font face="Consolas">sorted()</font></h4>
+<p><font face="Consolas">sorted</font> 也是一个高阶函数，它提供一个 <font face="Consolas"><em>key</em></font> 函数作为默认参数，实现自定义的排序：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">res1</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="nb">abs</span><span class="p">)</span>
+<span class="c1"># res1 = [2, -3, 4, -100] </span>
+
+<span class="n">res2</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoom&#39;</span><span class="p">,</span> <span class="s1">&#39;Course&#39;</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span>
+<span class="c1"># res2 = [&#39;alice&#39;, &#39;bob&#39;, &#39;Course&#39;, &#39;Zoom&#39;]</span>
+</pre></div>
+</td></tr></table></p>
+<p></font></p>
                 
                   
                 
@@ -489,6 +712,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2.2/" title="2.Parameter Characteristics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2.Parameter Characteristics
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../3-OOP/3.1/" title="1.Module" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                1.Module
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

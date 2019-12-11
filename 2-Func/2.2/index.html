@@ -42,7 +42,7 @@
 
     
       
-        <title>2.2 - Learning Notes of Python</title>
+        <title>2.Parameter Characteristics - Learning Notes of Python</title>
       
     
     
@@ -146,7 +146,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                2.2
+                2.Parameter Characteristics
               
             </span>
           
@@ -357,10 +357,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       II Function
@@ -388,10 +390,151 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2.Parameter Characteristics
+      </label>
+    
+    <a href="./" title="2.Parameter Characteristics" class="md-nav__link md-nav__link--active">
+      2.Parameter Characteristics
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1. 普通参数" class="md-nav__link">
+    1. 普通参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="(1). 实参" class="md-nav__link">
+    (1). 实参
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="(2). 形参" class="md-nav__link">
+    (2). 形参
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" title="2. 形参的高级参数特性" class="md-nav__link">
+    2. 形参的高级参数特性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-position-only" title="① 限定位置形参 (position-only)" class="md-nav__link">
+    ① 限定位置形参 (position-only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-keyword-only" title="② 限定关键字形参 (keyword-only)" class="md-nav__link">
+    ② 限定关键字形参 (keyword-only)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-args" title="③ 特殊形参：可变参数 *args" class="md-nav__link">
+    ③ 特殊形参：可变参数 *args
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kwargs" title="④ 特殊形参：可变参数 **kwargs" class="md-nav__link">
+    ④ 特殊形参：可变参数 **kwargs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" title="3. 总结：传参规则" class="md-nav__link">
+    3. 总结：传参规则
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" title="4. 特殊传参方法" class="md-nav__link">
+    4. 特殊传参方法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" title="(1). 序列解包" class="md-nav__link">
+    (1). 序列解包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" title="(2). 字典解包" class="md-nav__link">
+    (2). 字典解包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../2.2." title="2.Parameter Characteristics" class="md-nav__link">
-      2.Parameter Characteristics
+    <a href="../2.3/" title="3.High-order Function" class="md-nav__link">
+      3.High-order Function
     </a>
   </li>
 
@@ -598,7 +741,7 @@
               
                 
                 
-                  <h1>2.2</h1>
+                  <h1>2.Parameter Characteristics</h1>
                 
                 <p><font face="思源黑体 CN">
 <font face="Consolas"></font></p>
@@ -807,6 +950,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2.1/" title="1.Basic Characteristics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                1.Basic Characteristics
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2.3/" title="3.High-order Function" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                3.High-order Function
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
