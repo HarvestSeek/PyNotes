@@ -749,7 +749,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </td></tr></table>
-这种情况下，由于赋值语句 <kbd><font face="Consolas">g_a = g_a + 2</font></kbd> 的存在，<kbd><font face="Consolas">g_a</font></kbd> 仍是一个局部变量。由于通过自身赋值，相当于 <kbd><font face="Consolas">g_a</font></kbd> 在被分配到命名空间之前就被访问 (<font face="Calibri">referenced</font>) 了。</p>
+这种情况下，由于赋值语句 <kbd><font face="Consolas">g_a = g_a + 2</font></kbd> 的存在，<kbd><font face="Consolas">g_a</font></kbd> 由于赋值而改变了引用，<kbd><font face="Consolas">g_a</font></kbd> 仍是一个局部变量。由于通过自身赋值，相当于 <kbd><font face="Consolas">g_a</font></kbd> 在被分配到命名空间之前就被访问 (<font face="Calibri">referenced</font>) 了。</p>
 <p>如果要在函数内实现对全局变量的修改，可以通过 <font face="Consolas">global</font> 关键字，告诉解释器这是一个全局变量：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -768,7 +768,7 @@
 <span class="k">print</span><span class="p">(</span><span class="n">g_a</span><span class="p">)</span> <span class="c1"># 3</span>
 </pre></div>
 </td></tr></table>
-类似地，嵌套函数的闭包空间也会出现相同的问题，此时则用 <font face="Consolas">nonlocal</font> 关键字解决。例子详见 <a href="../../3-Func/3.3/#3" title="Closure">example</a>。
+类似地，嵌套函数的闭包空间也会出现相同的问题，此时则用 <font face="Consolas">nonlocal</font> 关键字解决。例子详见 <a href="../../3-Func/3.3/#2_1" title="Closure"><font face="Consolas" color=blue><em><strong>e.g.</strong></em></font></a>。
 </font></p>
                 
                   

@@ -532,6 +532,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3_1" title="(3). 循环变量" class="md-nav__link">
+    (3). 循环变量
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -701,6 +708,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3_1" title="(3). 循环变量" class="md-nav__link">
+    (3). 循环变量
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -820,7 +834,93 @@
 通过嵌套函数，高阶函数支持函数作为返回值返回，为程序提供更大的灵活性。</p>
 <h4 id="2_1">(2). 闭包</h4>
 <p>&emsp;在计算机科学中，闭包是词法闭包 (<font face="Calibri">lexical closure</font>) 的简称，是指实现了函数和其相关的环境 (<font face="Calibri">free variable</font>) 绑定在一起的技术。即使函数在这些自由变量的作用域外被调用，它依然可以访问这些自由变量 (值或引用)。</p>
-<p>&emsp;例如，如果要实现一个计算移动平均值的函数，普通的方法是通过 <font face="Consolas">OOP</font> 实现对成员的记录。</p>
+<p>&emsp;例如，如果要实现一个计算移动平均值的函数，普通的方法是通过 <font face="Consolas">OOP</font> 实现对成员的记录，更 <font face="Consolas">pythonic</font> 的办法是使用闭包记录状态。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_averager</span><span class="ss">()</span>:
+    <span class="nv">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nv">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nv">def</span> <span class="nv">averager</span><span class="ss">(</span><span class="o">*</span><span class="nv">vals</span><span class="ss">)</span>:
+        <span class="nv">nonlocal</span> <span class="nv">count</span>, <span class="nv">total</span>
+        <span class="nv">count</span> <span class="o">+=</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">vals</span><span class="ss">)</span>
+        <span class="nv">total</span> <span class="o">+=</span> <span class="nv">sum</span><span class="ss">(</span><span class="nv">vals</span><span class="ss">)</span>
+        <span class="k">return</span> <span class="nv">total</span> <span class="o">/</span> <span class="nv">count</span>
+    <span class="k">return</span> <span class="nv">averager</span>
+
+
+<span class="nv">avg</span> <span class="o">=</span> <span class="nv">get_averager</span><span class="ss">()</span>
+<span class="nv">avg</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>, <span class="mi">4</span>, <span class="mi">5</span>, <span class="mi">6</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">avg</span><span class="ss">(</span><span class="mi">7</span><span class="ss">))</span> # <span class="mi">4</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">avg</span>.<span class="nv">__closure__</span>[<span class="mi">1</span>].<span class="nv">cell_contents</span><span class="ss">)</span> # <span class="mi">28</span>
+</pre></div>
+</td></tr></table>
+实际上，所有的函数都有一个 <kbd><font face="Consolas"><strong>__closure__</strong></font></kbd> 属性。如果这个函数是一个闭包函数的话，那么 <kbd><font face="Consolas"><strong>cell_contents</strong></font></kbd> 中存储的就是自由变量。</br>
+&emsp;注意到，由于作用域的问题，这里使用了 <font face="Consolas">nonlocal</font> 关键字。</p>
+<h4 id="3_1">(3). 循环变量</h4>
+<p>需要注意的是，返回的函数没有立刻执行，而是直到调用了才被执行：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_square</span><span class="ss">()</span>:
+    <span class="nv">funcs</span> <span class="o">=</span> []
+    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">4</span><span class="ss">)</span>:
+        <span class="nv">def</span> <span class="nv">square</span><span class="ss">()</span>:
+            <span class="k">return</span> <span class="nv">i</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="nv">funcs</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">square</span><span class="ss">)</span>
+    <span class="k">return</span> <span class="nv">funcs</span>
+
+
+<span class="nv">sq1</span>, <span class="nv">sq2</span>, <span class="nv">sq3</span> <span class="o">=</span> <span class="nv">get_square</span><span class="ss">()</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">sq1</span><span class="ss">()</span>, <span class="nv">sq2</span><span class="ss">()</span>, <span class="nv">sq3</span><span class="ss">())</span> # <span class="mi">9</span> <span class="mi">9</span> <span class="mi">9</span>
+</pre></div>
+</td></tr></table>
+返回闭包函数时一定要注意不要引用循环变量。如果一定要引用，可以在嵌套一个函数保留状态：
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_square</span><span class="ss">()</span>:
+    <span class="nv">def</span> <span class="nv">reserve</span><span class="ss">(</span><span class="nv">j</span><span class="ss">)</span>:
+        <span class="nv">def</span> <span class="nv">square</span><span class="ss">()</span>:
+            <span class="k">return</span> <span class="nv">j</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="nv">square</span>
+    <span class="nv">funcs</span> <span class="o">=</span> []
+    <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">4</span><span class="ss">)</span>:
+        <span class="nv">funcs</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">reserve</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>
+    <span class="k">return</span> <span class="nv">funcs</span>
+
+
+<span class="nv">sq1</span>, <span class="nv">sq2</span>, <span class="nv">sq3</span> <span class="o">=</span> <span class="nv">get_square</span><span class="ss">()</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">sq1</span><span class="ss">()</span>, <span class="nv">sq2</span><span class="ss">()</span>, <span class="nv">sq3</span><span class="ss">())</span> # <span class="mi">1</span>, <span class="mi">4</span>, <span class="mi">9</span>
+</pre></div>
+</td></tr></table></p>
 <p></font></p>
                 
                   
