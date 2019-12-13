@@ -534,6 +534,26 @@
     2. 属性与访问限制
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="(1). 实例属性" class="md-nav__link">
+    (1). 实例属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="(2). 类属性" class="md-nav__link">
+    (2). 类属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -580,6 +600,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4.4/" title="4.Special Attributes and Methods" class="md-nav__link">
+      4.Special Attributes and Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4.5/" title="5.Enumeration" class="md-nav__link">
+      5.Enumeration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4.6/" title="6.Built-in Decorator" class="md-nav__link">
+      6.Built-in Decorator
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -614,6 +670,26 @@
   <a href="#2" title="2. 属性与访问限制" class="md-nav__link">
     2. 属性与访问限制
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="(1). 实例属性" class="md-nav__link">
+    (1). 实例属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="(2). 类属性" class="md-nav__link">
+    (2). 类属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -688,6 +764,7 @@
 </td></tr></table>
 在 <font face="Consolas">Python3</font> 中，<kbd><font face="Consolas">class Name(<em>object</em>):</font></kbd> 与 <kbd><font face="Consolas">class Name():</font></kbd> 和 <kbd><font face="Consolas">class Name:</font></kbd> 等价，都代表继承默认的基类 <font face="Consolas">object</font>。</p>
 <h3 id="2">2. 属性与访问限制</h3>
+<h4 id="1_1">(1). 实例属性</h4>
 <p>&emsp;一般在构造函数 <kbd><font face="Consolas"><em>def</em> __init__(<em>self</em>, ...)</font></kbd> 中把类的属性绑定到 <kbd><font face="Consolas"><em>self</em></font></kbd> 上，也可以在构造函数前声明。上面的例子中，类的成员都是 <font face="Consolas">public</font> 的，可以通过添加下划线实现 <font face="Consolas">private</font> ：
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -700,6 +777,8 @@
 </td></tr></table>
 &emsp;尽管变量被设置为私有，但仍可以通过 <kbd><font face="Consolas">instance._Teemo__name</font></kbd> 的方式访问，<font face="Consolas">Python</font> 并不阻止访问者做坏事。</br>
 &emsp;在 <font face="Consolas">Python</font> 中，形如 <kbd><font face="Consolas">__<em>&lt;arg_name&gt;</em>__</font></kbd> 的变量是特殊变量，可以直接访问；形如 <kbd><font face="Consolas">_<em>&lt;arg_name&gt;</em></font></kbd> 的变量代表 “虽然我可以被访问，但请把我视为私有变量，不要随意访问”。</p>
+<h4 id="2_1">(2). 类属性</h4>
+<p>&emsp;在 <kbd><font face="Consolas">__init__</font></kbd> 前定义的变量为类变量。类变量只能通过类名访问，如果通过对象访问，在 <font face="Consolas">python</font> 中相当于动态添加了一个实例属性。</p>
 <h3 id="3">3. 方法</h3>
 <p>&emsp;类的方法的第一个参数必须显式声明为 <kbd><font face="Consolas"><em>self</em></font></kbd> (也可以是 <kbd><font face="Consolas"><em>this</em></font></kbd>，但通常用 <kbd><font face="Consolas"><em>self</em></font></kbd>)，表示这个对象。</br>
 &emsp;私有方法也通过添加双下划线前缀实现：
