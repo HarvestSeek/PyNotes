@@ -711,7 +711,7 @@
 <blockquote>
 <p><font face="Consolas"><em>a namespace is mapping from names to objects. Most namespaces are currently implemented as Python dictionaries.</em></font></p>
 </blockquote>
-<p>命名空间就是内存中存放名字与值的映射关系的地方，通常通过字典实现。</br>
+<p>命名空间就是内存中存放名字与值的映射关系的地方，通常通过字典实现，其设计的原因是避免变量的重命名。</br>
 一般有三种命名空间：
 <html> 
 <body>
@@ -731,13 +731,13 @@
 </ul>
 </body>
 </html>
-三个命名空间成嵌套关系。当要使用一个变量时，<font face="Consolas">Python</font> 解释器的查找顺序为从外向内，即 <font face="Consolas">built-in -&gt; global -&gt; local</font>。如果找不到变量，它会放弃查找并抛出一个 <font face="Consolas">NameError</font>。</p>
+三个命名空间成嵌套关系。当要使用一个变量时，<font face="Consolas">Python</font> 解释器的查找顺序为从内向外，即 <font face="Consolas">local -&gt; global -&gt; built-in</font>。如果找不到变量，它会放弃查找并抛出一个 <font face="Consolas">NameError</font>。</p>
 <p>不同命名空间中可以有相同的变量名。</p>
 <h3 id="2">2. 作用域</h3>
 <blockquote>
 <p><font face="Consolas"><em>a scope is a textual region of a Python program where a namespace is directly accessible. "Directly accessible" here means that an unqualified reference to a name attempts to find the name in the namespace.</em></font></p>
 </blockquote>
-<p>在一个 <font face="Consolas">Python</font> 程序的不同位置定义的变量会被映射到不同的命名空间中，作用域是伴随着命名空间产生的概念，它指 <font face="Consolas">Python</font> 程序可以访问某一命名空间的一块文本区域。根据命名空间的分类，作用域可分为以下四种：
+<p>作用域是伴随着命名空间产生的概念，在一个 <font face="Consolas">Python</font> 程序的不同位置定义的变量会被映射到不同的命名空间中，因此不同作用域对命名空间的访问权限也不同，访问顺序为从当前位置向外访问。根据命名空间的分类，作用域可分为以下四种 (成嵌套关系)：
 <html> 
 <body>
 <ul style="margin-top:-10px;margin-bottom:-20px">
