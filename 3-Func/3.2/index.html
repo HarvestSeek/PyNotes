@@ -2,7 +2,6 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,33 +9,13 @@
 	
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Learning notes of python">
       
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
     
 	<meta name="format-detection" content="telephone=no">
 
@@ -46,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
       
       
         
@@ -57,118 +36,110 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
       <link rel="stylesheet" href="../../css/katex.css">
     
       <link rel="stylesheet" href="../../css/basic.css">
     
+      <link rel="stylesheet" href="../../css/wab.css">
+    
+      <link rel="stylesheet" href="../../css/font.css">
+    
+      <link rel="stylesheet" href="../../css/simpletable.css">
+    
+      <link rel="stylesheet" href="../../css/ktblock.css">
+    
+      <link rel="stylesheet" href="../../css/pseudocode.css">
+    
+      <link rel="stylesheet" href="../../css/comptable.css">
+    
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
     
     
       
         
-<script>
-  window.ga = window.ga || function() {
-    (ga.q = ga.q || []).push(arguments)
-  }
-  ga.l = +new Date
-  /* Setup integration and send page view */
-  ga("create", "UA-117404761-1", "auto")
-  ga("set", "anonymizeIp", true)
-  ga("send", "pageview")
-  /* Register handler to log search on blur */
-  document.addEventListener("DOMContentLoaded", () => {
-    if (document.forms.search) {
-      var query = document.forms.search.query
-      query.addEventListener("blur", function() {
-        if (this.value) {
-          var path = document.location.pathname;
-          ga("send", "pageview", path + "?q=" + this.value)
-        }
-      })
-    }
-  })
-</script>
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117404761-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
+  
     
     
     <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="blue">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#1" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Learning Notes of Python" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon">import_contacts</i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Learning Notes of Python
-            </span>
-            <span class="md-header-nav__topic">
-              
-                2.Parameter Characteristics
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Learning Notes of Python" class="md-header-nav__button md-logo" aria-label="Learning Notes of Python">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learning Notes of Python
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              2.Parameter Characteristics
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Type to start searching
           </div>
@@ -178,31 +149,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Learning Notes of Python" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Notes of Python" class="md-nav__button md-logo" aria-label="Learning Notes of Python">
       
-        <i class="md-icon">import_contacts</i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11" /></svg>
+
     </a>
     Learning Notes of Python
   </label>
@@ -240,13 +212,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       I Fudamentals
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="I Fudamentals" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         I Fudamentals
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -258,8 +236,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1-Fundm/1.1/" title="1.Number" class="md-nav__link">
-      1.Number
+    <a href="../../1-Fundm/1/" title="1. basic types" class="md-nav__link">
+      1. basic types
     </a>
   </li>
 
@@ -270,44 +248,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1-Fundm/1.2/" title="2.String" class="md-nav__link">
-      2.String
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Fundm/1.3/" title="3.List and Tuple" class="md-nav__link">
-      3.List and Tuple
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Fundm/1.4/" title="4.Dict" class="md-nav__link">
-      4.Dict
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Fundm/1.5/" title="5.Set" class="md-nav__link">
-      5.Set
+    <a href="../../1-Fundm/2/" title="2. containers" class="md-nav__link">
+      2. containers
     </a>
   </li>
 
@@ -336,13 +278,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       II Features
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="II Features" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         II Features
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -398,13 +346,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       III Function
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="III Function" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         III Function
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -431,11 +385,14 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         2.Parameter Characteristics
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
       </label>
     
     <a href="./" title="2.Parameter Characteristics" class="md-nav__link md-nav__link--active">
@@ -443,30 +400,35 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 普通参数" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     1. 普通参数
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="1. 普通参数">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" title="(1). 实参" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     (1). 实参
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" title="(2). 形参" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 形参
   </a>
   
@@ -478,36 +440,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2_1" title="2. 形参的高级参数特性" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     2. 形参的高级参数特性
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="2. 形参的高级参数特性">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-position-only" title="① 限定位置形参 (position-only)" class="md-nav__link">
+  <a href="#1-position-only" class="md-nav__link">
     ① 限定位置形参 (position-only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-keyword-only" title="② 限定关键字形参 (keyword-only)" class="md-nav__link">
+  <a href="#2-keyword-only" class="md-nav__link">
     ② 限定关键字形参 (keyword-only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-args" title="③ 特殊形参：可变参数 *args" class="md-nav__link">
+  <a href="#3-args" class="md-nav__link">
     ③ 特殊形参：可变参数 *args
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-kwargs" title="④ 特殊形参：可变参数 **kwargs" class="md-nav__link">
+  <a href="#4-kwargs" class="md-nav__link">
     ④ 特殊形参：可变参数 **kwargs
   </a>
   
@@ -519,29 +481,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 总结：传参规则" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     3. 总结：传参规则
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" title="4. 特殊传参方法" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     4. 特殊传参方法
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="4. 特殊传参方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_2" title="(1). 序列解包" class="md-nav__link">
+  <a href="#1_2" class="md-nav__link">
     (1). 序列解包
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_2" title="(2). 字典解包" class="md-nav__link">
+  <a href="#2_2" class="md-nav__link">
     (2). 字典解包
   </a>
   
@@ -551,10 +513,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -599,13 +557,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       IV OOP
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="IV OOP" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
         IV OOP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -699,30 +663,35 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" title="1. 普通参数" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     1. 普通参数
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="1. 普通参数">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" title="(1). 实参" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     (1). 实参
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" title="(2). 形参" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     (2). 形参
   </a>
   
@@ -734,36 +703,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2_1" title="2. 形参的高级参数特性" class="md-nav__link">
+  <a href="#2_1" class="md-nav__link">
     2. 形参的高级参数特性
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="2. 形参的高级参数特性">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-position-only" title="① 限定位置形参 (position-only)" class="md-nav__link">
+  <a href="#1-position-only" class="md-nav__link">
     ① 限定位置形参 (position-only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-keyword-only" title="② 限定关键字形参 (keyword-only)" class="md-nav__link">
+  <a href="#2-keyword-only" class="md-nav__link">
     ② 限定关键字形参 (keyword-only)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-args" title="③ 特殊形参：可变参数 *args" class="md-nav__link">
+  <a href="#3-args" class="md-nav__link">
     ③ 特殊形参：可变参数 *args
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-kwargs" title="④ 特殊形参：可变参数 **kwargs" class="md-nav__link">
+  <a href="#4-kwargs" class="md-nav__link">
     ④ 特殊形参：可变参数 **kwargs
   </a>
   
@@ -775,29 +744,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" title="3. 总结：传参规则" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     3. 总结：传参规则
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" title="4. 特殊传参方法" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     4. 特殊传参方法
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="4. 特殊传参方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_2" title="(1). 序列解包" class="md-nav__link">
+  <a href="#1_2" class="md-nav__link">
     (1). 序列解包
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_2" title="(2). 字典解包" class="md-nav__link">
+  <a href="#2_2" class="md-nav__link">
     (2). 字典解包
   </a>
   
@@ -807,10 +776,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -825,6 +790,9 @@
               
                 
                 
+                  
+                
+                
                   <h1>2.Parameter Characteristics</h1>
                 
                 <p><font face="思源黑体 CN">
@@ -836,17 +804,12 @@
 &emsp;&emsp;&emsp;&emsp;<font face="Consolas"><font color=red>func</font>(&lt;<font face="思源黑体 CN">位置实参</font>&gt;, &lt;<font face="思源黑体 CN">关键字实参</font>&gt;)</font></br>
 </font>
 要注意位置实参和形参之间要严格按照上面的顺序，且不能交错。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
 
 <span class="c1"># demo</span>
 <span class="n">print_property</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;bob&#39;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 关键字实参的意义在于：① 摆脱位置限制；② 当默认参数较多，提升易用性和可读性。</p>
 <h4 id="2">(2). 形参</h4>
 <p><font face="Consolas">Python</font> 中普通形参也有两个部分：</br>
@@ -854,44 +817,29 @@
 &emsp;&emsp;&emsp;&emsp;<font face="Consolas"><em><strong>def</strong></em> <font color=red>func</font>(&lt;<font face="思源黑体 CN">位置实参</font>&gt;, &lt;<font face="思源黑体 CN">默认实参</font>&gt;)</font></br>
 </font>
 当使用默认参数作为形参，如果调用时没指明这个参数，就会使用默认值作为其值使用；如果指明，就使用实参指明的值。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">print_property</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">print_property</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">gender</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 这种机制简化了函数的调用。在使用时要注意以下问题：</br>
 ① 函数定义时，同实参一样，位置参数在前，默认参数在后。</br>
 ② 函数在定义时，默认参数指示的变量就被初始化了，而不是在每次调用时初始化。因此，默认参数应尽量为不可变对象。</br></p>
 <p><font face="Consolas"><em>Example</em>:</font>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">init_with_M</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="p">[]):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_with_M</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="p">[]):</span>
     <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">L</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 <font face="Consolas"><em>Solution</em>:</font>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">init_with_M</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">init_with_M</span><span class="p">(</span><span class="n">L</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">L</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">L</span>
-</pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 <h3 id="2_1">2. 形参的高级参数特性</h3>
 <p><font face="Consolas">Python</font> 中形参表可分为五个部分：</br>
 <font size=3>
@@ -899,13 +847,10 @@
 </font></p>
 <h4 id="1-position-only">① 限定位置形参 (<font face="Consolas">position-only</font>)</h4>
 <p>限制开头几个参数只能通过位置而不能通过关键字传递，在 <font face="Consolas">Python</font> <font face="Consolas">3.8</font> 中正式引入。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># example: a, b are positon-only parameters</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># example: a, b are positon-only parameters</span>
 <span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 <h4 id="2-keyword-only">② 限定关键字形参 (<font face="Consolas">keyword-only</font>)</h4>
 <p>又叫命名关键字参数，限制后面几个参数只能通过关键字的方式传递。这样设置的意义通常在于：</br>
 <html> 
@@ -916,28 +861,15 @@
 </ul>
 </body>
 </html></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># example: c, d are keyword-only parameters</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># example: c, d are keyword-only parameters</span>
 <span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 
 <h4 id="3-args">③ 特殊形参：可变参数 <font face="Consolas">*<em>args</em></font></h4>
 <p>&emsp;<font face="Consolas">*<em>args</em></font> 的星号与限定关键字参数的星号占同一位置，它负责接收调用时把限定位置形参和普通形参都匹配完后剩余的位置实参。接收的方式是把这些剩下的参数封装成一个元组，在函数内可通过变量 <font face="Consolas"><em>args</em></font> 使用它。如果未接收到值，那么 <font face="Consolas"><em>args</em></font> 是一个空元组。</br>
 &emsp;如果希望它可以接收到参数，前面的所有普通形参都要按位置传递，否则调用的实参会出现关键字实参前于位置实参；如果忽略 <font face="Consolas"><em>*args</em></font>，普通形参依然可以兼容关键字形式。
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># example: d is keyword-only parameter</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># example: d is keyword-only parameter</span>
 <span class="k">def</span> <span class="nf">printer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
@@ -948,8 +880,7 @@
 
 <span class="c1"># SyntaxError: positional argument follows keyword argument</span>
 <span class="n">printer</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 <h4 id="4-kwargs">④ 特殊形参：可变参数 <font face="Consolas">**<em>kwargs</em></font></h4>
 <p>&emsp;<font face="Consolas">**<em>kwargs</em></font> 负责接收所有调用时未成功匹配的关键字实参，相当于关键字实参的可变参数，并封装成一个字典，可以在函数内通过变量 <font face="Consolas"><em>kwargs</em></font> 使用它。</br>
 &emsp;调用者如果把前面的关键字参数打错，相应的参数就会被传进 <font face="Consolas"><em>kwargs</em></font> 造成错误，由于 <font face="Consolas"><em>kwargs</em></font> 的自由度很高，设计者使用它时需谨慎。</p>
@@ -973,16 +904,7 @@
 <h3 id="4">4. 特殊传参方法</h3>
 <h4 id="1_2">(1). 序列解包</h4>
 <p>当需要把一个序列的对象解放出来，作为函数的位置实参传递，可以通过前缀 <font face="Consolas">*</font> 实现：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">kw1</span><span class="p">,</span> <span class="n">kw2</span><span class="p">,</span> <span class="n">kw3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">kw1</span><span class="p">,</span> <span class="n">kw2</span><span class="p">,</span> <span class="n">kw3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">pass</span>
 
 <span class="c1"># demo:</span>
@@ -992,20 +914,10 @@
 <span class="c1"># result:</span>
 <span class="c1"># a = 1, b = 2, c = 3, x = 100, y = 4</span>
 <span class="c1"># args = [5, 6], kwargs = {}</span>
-</pre></div>
-</td></tr></table></p>
+</code></pre></div></p>
 <h4 id="2_2">(2). 字典解包</h4>
 <p>当需要把一个字典的对象解放出来，作为函数的关键字实参传递，可以通过前缀 <font face="Consolas">**</font> 实现：
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">kw1</span><span class="p">,</span> <span class="n">kw2</span><span class="p">,</span> <span class="n">kw3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="o">/</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">kw1</span><span class="p">,</span> <span class="n">kw2</span><span class="p">,</span> <span class="n">kw3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">pass</span>
 
 <span class="c1"># demo:</span>
@@ -1015,11 +927,8 @@
 <span class="c1"># result:</span>
 <span class="c1"># a = 1, b = 2, c = 3, x = 100, y = 4</span>
 <span class="c1"># args= [], kwargs = {&#39;kw4&#39;: dict2[&#39;kw4&#39;]}</span>
-</pre></div>
-</td></tr></table>
+</code></pre></div>
 </font></p>
-                
-                  
                 
               
               
@@ -1036,34 +945,34 @@
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../3.1/" title="1.Basic Characteristics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../3.1/" title="1.Basic Characteristics" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 1.Basic Characteristics
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../3.3/" title="3.High-order Function" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../3.3/" title="3.High-order Function" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 3.High-order Function
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
             </div>
           </a>
         
@@ -1074,11 +983,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1087,9 +995,18 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="../../js/katex.js"></script>
       

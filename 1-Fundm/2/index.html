@@ -1,0 +1,1081 @@
+<!-- Fix MathJax rendering on iOS Safari due to rendering long numbers as phone numbers. -->
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+	
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learning notes of python">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+	<meta name="format-detection" content="telephone=no">
+
+    
+      
+        <title>2. containers - Learning Notes of Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/katex.css">
+    
+      <link rel="stylesheet" href="../../css/basic.css">
+    
+      <link rel="stylesheet" href="../../css/wab.css">
+    
+      <link rel="stylesheet" href="../../css/font.css">
+    
+      <link rel="stylesheet" href="../../css/simpletable.css">
+    
+      <link rel="stylesheet" href="../../css/ktblock.css">
+    
+      <link rel="stylesheet" href="../../css/pseudocode.css">
+    
+      <link rel="stylesheet" href="../../css/comptable.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-117404761-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="blue">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-list-and-tuple" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Learning Notes of Python" class="md-header-nav__button md-logo" aria-label="Learning Notes of Python">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Learning Notes of Python
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              2. containers
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learning Notes of Python" class="md-nav__button md-logo" aria-label="Learning Notes of Python">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11" /></svg>
+
+    </a>
+    Learning Notes of Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Preface" class="md-nav__link">
+      Preface
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../color/" title="Color" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      I Fudamentals
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="I Fudamentals" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        I Fudamentals
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1/" title="1. basic types" class="md-nav__link">
+      1. basic types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2. containers
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="2. containers" class="md-nav__link md-nav__link--active">
+      2. containers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list-and-tuple" class="md-nav__link">
+    1. list and tuple
+  </a>
+  
+    <nav class="md-nav" aria-label="1. list and tuple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-function" class="md-nav__link">
+    (1). function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operator" class="md-nav__link">
+    (3). operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dict" class="md-nav__link">
+    2. dict
+  </a>
+  
+    <nav class="md-nav" aria-label="2. dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ctor" class="md-nav__link">
+    (1). ctor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method_1" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set" class="md-nav__link">
+    3. set
+  </a>
+  
+    <nav class="md-nav" aria-label="3. set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ctor_1" class="md-nav__link">
+    (1). ctor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method_2" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.6/" title="6.Basic Structure" class="md-nav__link">
+      6.Basic Structure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      II Features
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="II Features" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        II Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2-F/2.1/" title="1.Slice" class="md-nav__link">
+      1.Slice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2-F/2.2/" title="2.Listcomps and Genexps" class="md-nav__link">
+      2.Listcomps and Genexps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../2-F/2.3/" title="3.Namespace and Scope" class="md-nav__link">
+      3.Namespace and Scope
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      III Function
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="III Function" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        III Function
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Func/3.1/" title="1.Basic Characteristics" class="md-nav__link">
+      1.Basic Characteristics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Func/3.2/" title="2.Parameter Characteristics" class="md-nav__link">
+      2.Parameter Characteristics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Func/3.3/" title="3.High-order Function" class="md-nav__link">
+      3.High-order Function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Func/3.4/" title="4.Decorator" class="md-nav__link">
+      4.Decorator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IV OOP
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="IV OOP" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        IV OOP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.1/" title="1.Module" class="md-nav__link">
+      1.Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.2/" title="2.Class and Instance" class="md-nav__link">
+      2.Class and Instance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.3/" title="3.Inheritance and Polymorphism" class="md-nav__link">
+      3.Inheritance and Polymorphism
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.4/" title="4.Special Attributes and Methods" class="md-nav__link">
+      4.Special Attributes and Methods
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.5/" title="5.Enumeration" class="md-nav__link">
+      5.Enumeration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-OOP/4.6/" title="6.Built-in Decorator" class="md-nav__link">
+      6.Built-in Decorator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-list-and-tuple" class="md-nav__link">
+    1. list and tuple
+  </a>
+  
+    <nav class="md-nav" aria-label="1. list and tuple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-function" class="md-nav__link">
+    (1). function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operator" class="md-nav__link">
+    (3). operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dict" class="md-nav__link">
+    2. dict
+  </a>
+  
+    <nav class="md-nav" aria-label="2. dict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ctor" class="md-nav__link">
+    (1). ctor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method_1" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-set" class="md-nav__link">
+    3. set
+  </a>
+  
+    <nav class="md-nav" aria-label="3. set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ctor_1" class="md-nav__link">
+    (1). ctor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-method_2" class="md-nav__link">
+    (2). method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>2. containers</h1>
+                
+                <p><font class="generalcy"></p>
+<h3 id="1-list-and-tuple">1. list and tuple</h3>
+<p>当 <cs>tuple</cs> 初始化只有一个元素时，为避免歧义要加逗号</p>
+<h4 id="1-function">(1). function</h4>
+<table id="basic">
+<tr> <th>函数名</th> <th>作用</th> </tr>
+<tr>
+    <td>len(<i>seq</i>), type(<i>var</i>)</td>
+    <td>...</td>
+</tr>
+<tr class="alt">
+    <td>max(<i>seq</i>), min(<i>seq</i>)</td>
+    <td>最大最小值 (元素类型相同)</td>
+</tr>
+<tr class="alt">
+    <td>list(<i>seq</i>), tuple(<i>seq</i>)</td>
+    <td>强制转换</td>
+</tr>
+<tr class="alt">
+    <td>sorted(<i>iterable</i>, *, <i>key</i>=None, <i>reverse</i>=False)</td>
+    <td>保留原对象，返回一个排好序的可迭代对象</td>
+</tr>
+</table>
+
+<div class="highlight"><pre><span></span><code><span class="n">students</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;jane&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dave&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="2-method">(2). method</h4>
+<table id="basic">
+<tr> <th>方法名</th> <th>作用</th> </tr>
+<tr>
+    <td>append(<i>obj</i>)</td> <td>追加对象</td>
+</tr>
+<tr class="alt">
+    <td>insert(<i>index</i>, <i>obj</i>)</td> <td>插入到指定位置，若 index 指定的位置未开辟则无效</td>
+</tr>
+<tr>
+    <td>pop(<i>index</i>=-1)</td> <td>删除元素</td>
+</tr>
+<tr class="alt">
+    <td>remove(<i>obj</i>)</td> <td>移除第一个<cy> </cy>obj<cy> </cy>的匹配项</td>
+</tr>
+<tr class="alt">
+    <td>index(<i>obj</i>, [<i>start</i>, [<i>end</i>]])</td> <td>返回某元素第一次出现的索引，也可指明查找的范围</td>
+</tr>
+<tr class="alt">
+    <td>count(<i>obj</i>)</td> <td>返回某元素出现次数</td>
+</tr>
+<tr class="alt">
+    <td>reverse()</td> <td>反转</td>
+</tr>
+<tr class="alt">
+    <td>extend(<i>seq</i>)</td> <td>在列表末尾追加另一个序列</td>
+</tr>
+<tr class="alt">
+    <td>sort(*, <i>key</i>=None, <i>reverse</i>=False)</td> <td>在原列表上排序</td>
+</tr>
+</table>
+
+<p><cs>tuple</cs> 则只支持其中的两个 <cs>Observer</cs>: <cs>index()</cs>、<cs>count()</cs>。</p>
+<h4 id="3-operator">(3). operator</h4>
+<table id="basic">
+<tr> <th>操作符</th> <th>作用</th> </tr>
+<tr class="smallalign">
+    <td>[1, 2] + [3, 4], ['hello'] * 6</td>
+    <td>拼接</td>
+</tr>
+<tr class="smallalign">
+    <td>1 in [1, 2, 3]</td>
+    <td>存在于</td>
+</tr>
+<tr class="smallalign">
+    <td>for x in [1, 2]</td>
+    <td>迭代</td>
+</tr>
+</table>
+
+<h3 id="2-dict">2. dict</h3>
+<p><cy>key</cy> 必须 <cy>immutable</cy></p>
+<h4 id="1-ctor">(1). ctor</h4>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="n">e</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span> <span class="o">==</span> <span class="n">d</span> <span class="o">==</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="2-method_1">(2). method</h4>
+<table class="basic2">
+<tr> <th>方法名</th> <th>作用</th> </tr>
+<tr>
+    <td>get(<i>key</i>, <i>default</i>=None)</td>
+    <td>返回对应的<cy> </cy>value, 不存在则返回<cy> </cy>default</td>
+</tr>
+<tr class="alt">
+    <td><del>has_key(<i>key</i>)</del></td>
+    <td>在<cy> python3 </cy>中已被 in 代替</td>
+</tr>
+<tr>
+    <td>setdefault(<i>key</i>, <i>default</i>=None)</td>
+    <td>存在对应的 value 则返回，否则插入 key-default</td>
+</tr>
+<tr class="alt">
+    <td>pop(<i>key</i>[, <i>default</i>])</td>
+    <td>删除<cy> </cy>key<cy> </cy>对应的<cy> </cy>value<cy> </cy>, 并返回被删掉的值。<br>
+    若 <cy> </cy>key<cy> </cy>不存在，返回<cy> </cy>default；若<cy> </cy>default<cy> </cy>也未设置，抛出<cy> </cy>KeyError</td>
+</tr>
+</tr>
+<tr class="alt">
+    <td>keys(), values(), items()</td>
+    <td>返回可遍历的 键, 值, 键-值 的列表</td>
+</tr>
+<tr class="alt">
+    <td>fromkeys(<i>iterable</i>[, val])</td>
+    <td>classmethod.<br>
+    以<cy> </cy>iterable<cy> </cy>中的元素为键创建新字典，值全设为<cy> </cy>val<cy> </cy>(默认<cy> </cy>None)</td>
+</tr>
+<tr class="alt">
+    <td>update(<i>dict</i>)</td>
+    <td>把<cy> </cy>dict<cy> </cy>中的 k-v 都更新到字典里，已存在的会被覆盖</td>
+</tr>
+<tr class="alt">
+    <td>clear()</td>
+    <td>清空所有元素</td>
+</tr>
+<tr class="alt">
+    <td>copy()</td>
+    <td>Shallow Copy</td>
+</tr>
+</table>
+
+<h3 id="3-set">3. set</h3>
+<p>创建空集只能通过 <cs>set()</cs>，{ } 代表空 <cs>dict</cs></p>
+<h4 id="1-ctor_1">(1). ctor</h4>
+<table class="basic2">
+<tr>
+    <td>set([<i>iterable</i>])</td>
+</tr>
+<tr class="alt">
+    <td>frozenset([<i>iterable</i>])</td>
+</tr>
+</table>
+
+<h4 id="2-method_2">(2). method</h4>
+<table class="basic2">
+<tr> <th>方法名</th> <th>作用</th> <th>运算符版本</th> </tr>
+<tr class="alt">
+    <td>isdisjoint(<i>S</i>)</td>
+    <td>判断两集合是否不相交</td>
+    <td>\</td>
+</tr>
+<tr class="alt">
+    <td>issubset(<i>other</i>), issuperset(<i>other</i>)</td>
+    <td>是否为指定集合的子/超集</td>
+    <td>set <= other<br>
+    (< → <= and !=)</td>
+</tr>
+<tr class="alt">
+    <td>union(*<i>others</i>)</td>
+    <td>并</td>
+    <td>set | other | ...</td>
+</tr>
+</tr>
+<tr class="alt">
+    <td>intersection(*<i>others</i>)</td>
+    <td>交</td>
+    <td>set & other & ...</td>
+</tr>
+<tr class="alt">
+    <td>difference(*<i>others</i>)</td>
+    <td>差</td>
+    <td>set - other - ...</td>
+</tr>
+<tr class="alt">
+    <td>symmetric_difference(<i>other</i>)</td>
+    <td>对称差</td>
+    <td>set ^ other</td>
+</tr>
+<tr>
+    <td>update(*<i>others</i>)</td>
+    <td>添加新的元素或集合到此集合中</td>
+    <td>set |= other | ...</td>
+</tr>
+<tr class="alt">
+    <td>intersection_update(*<i>others</i>)</td>
+    <td>交 (在原集合上删除非公共元素)</td>
+    <td>set &= other & ...</td>
+</tr>
+<tr class="alt">
+    <td>difference_update(*<i>others</i>)</td>
+    <td>差 (在原集合上移除)</td>
+    <td>set -= other | ...</td>
+</tr>
+<tr class="alt">
+    <td>symmetric_difference_update(<i>other</i>)</td>
+    <td>对称差 (原集上操作)</td>
+    <td>set ^= other</td>
+</tr>
+<tr>
+    <td>add(<i>e</i>)</td>
+    <td>添加一个元素</td>
+    <td>\</td>
+</tr>
+<tr class="alt">
+    <td>discard(<i>e</i>))</td>
+    <td>若存在则删除</td>
+    <td>\</td>
+</tr>
+<tr>
+    <td>remove(<i>e</i>)</td>
+    <td>删除，不存在则报<cy> </cy>KeyError</td>
+    <td>\</td>
+</tr>
+<tr class="alt">
+    <td>pop()</td>
+    <td>随机移除一个元素，为空则报<cy> </cy>KeyError</td>
+    <td>\</td>
+</tr>
+</table>
+
+<p><cs>frozenset</cs> 只支持前 <cy>6</cy> 个方法</p>
+<p></font></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../1/" title="1. basic types" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                1. basic types
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../1.6/" title="6.Basic Structure" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                6.Basic Structure
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

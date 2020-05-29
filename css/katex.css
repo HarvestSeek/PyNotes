@@ -16,3 +16,19 @@
 .katex-html {
   overflow-y: hidden;
 }
+
+.smallkatex .katex {
+  font-size: 0.8em !important;
+  font: normal 1.1em KaTeX_Main, Times New Roman, serif;
+  line-height: 1px;
+  white-space: normal;
+  text-indent: 0;
+}
+
+.generalkatex .katex {
+  font-size: 1.2em !important;
+  font: normal 1.1em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  white-space: normal;
+  text-indent: 0;
+}
